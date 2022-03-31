@@ -1,6 +1,6 @@
 package ru.netology
 
-const val PERCENTTRANSACTION: Double = 0.75 / 100
+const val PERCENTTRANSACTION: Double = 0.0075
 const val MINMONEYTRANSFER: UInt = 3500u
 
 fun main() {
