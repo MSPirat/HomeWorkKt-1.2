@@ -16,12 +16,11 @@ fun main() {
 	val previousAmount = (readln().toUInt() * 100u)
 
 	val sumAmount = if (previousAmount <= firstLimit) previousAmount
-					else if (previousAmount <= secondLimit) previousAmount - DISCOUNT
-					else previousAmount - (previousAmount.toDouble() * PERCENTDISCOUNT).toUInt()
+	else if (previousAmount <= secondLimit) previousAmount - DISCOUNT
+	else previousAmount - (previousAmount.toDouble() * PERCENTDISCOUNT).toUInt()
 
-	if (meloman) {
-		sumAmount - (sumAmount.toDouble() * PERCENTMELOMAN).toUInt()
-	}
+	val sumAmountMeloman = if (meloman) sumAmount - (sumAmount.toDouble() * PERCENTMELOMAN).toUInt()
+	else sumAmount
 
-	println("Сумма покупки с учетом скидок: ${sumAmount / 100u} руб.")
+	println("Сумма покупки с учетом скидок: ${sumAmountMeloman / 100u} руб.")
 }
